@@ -1,3 +1,4 @@
+import 'package:electrician/components/Loader.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -40,7 +41,7 @@ class _ProfilePageState extends State<ProfilePage> {
             .snapshots(),
         builder: (context, snapshot) {
           if (!snapshot.hasData) {
-            return const Center(child: CircularProgressIndicator());
+            return const Center(child: Loader());
           }
 
           final data = snapshot.data!.data() as Map<String, dynamic>? ?? {};

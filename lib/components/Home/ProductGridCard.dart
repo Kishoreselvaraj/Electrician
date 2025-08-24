@@ -1,3 +1,4 @@
+import 'package:electrician/components/Loader.dart';
 import 'package:flutter/material.dart';
 
 class ProductGridCard extends StatelessWidget {
@@ -52,7 +53,7 @@ class ProductGridCard extends StatelessWidget {
                     if (progress == null) return child;
                     return SizedBox(
                       height: imageHeight,
-                      child: const Center(child: CircularProgressIndicator()),
+                      child: const Center(child: Loader()),
                     );
                   },
                   errorBuilder: (context, error, stackTrace) => Container(

@@ -1,3 +1,4 @@
+import 'package:electrician/components/Loader.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
@@ -299,7 +300,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     child: loading
-                        ? CircularProgressIndicator(
+                        ? Loader(
                             color: Colors.white,
                           )
                         : Text(
